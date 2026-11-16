@@ -76,7 +76,7 @@ def rollout(weights, maps, trace=False):
     n=len(maps)
     p=np.array([m['start'] for m in maps],float)
     goals=np.array([m['goal'] for m in maps],float)
-    count=max(len(m['obstacles']) for m in maps)
+    count=max(1,max(len(m['obstacles']) for m in maps))
     obs=np.array([m['obstacles']+[[1e6,1e6,0.]]*(count-len(m['obstacles'])) for m in maps],float)
     theta=np.array([m.get('theta',0.) for m in maps])
     active=np.ones(n,bool); status=np.full(n,'timeout',dtype='<U10')
@@ -111,7 +111,7 @@ def rollout(weights, maps, trace=False):
 def reachable(m):
     """Muhafazakâr 0.2 m ızgarada 4-komşulu, kenarları doğrulanan BFS."""
     from collections import deque
-    obs=np.array(m['obstacles'])[None,:,:]
+    obs=np.array(m['obstacles'] or [[1e6,1e6,0.]])[None,:,:]
     start=np.array(m['start']);goal=np.array(m['goal'])
     if segment_clearance(start[None,:],start[None,:],obs)[0]<=0 or segment_clearance(goal[None,:],goal[None,:],obs)[0]<=0:
         return False

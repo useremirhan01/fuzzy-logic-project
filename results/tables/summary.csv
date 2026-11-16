@@ -1,0 +1,3 @@
+method,success,collision,timeout,n,clearance_mean,seed_success_rate_sd
+baseline,142,7,1,150,0.27248055857446973,0.029814239699997188
+proposed,140,9,1,150,0.27861508299771814,0.04714045207910316

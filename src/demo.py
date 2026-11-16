@@ -20,7 +20,13 @@ class Demo:
         self.info=tk.Text(self.root,width=42,height=38,font=('Consolas',10),bg='#101c2c',fg='#e1edf9');self.info.pack(side='right',fill='both')
         self.load();self.root.after(40,self.tick)
     def load(self):
-        try:self.map=make_map(int(self.seed.get()),6);self.reset()
+        try:
+            seed=int(self.seed.get())
+            source=ROOT/'data/full_splits.json'
+            saved=json.loads(source.read_text())['test'] if source.exists() else []
+            self.map=next((m for m in saved if m['seed']==seed),None)
+            if self.map is None:self.map=make_map(seed,6)
+            self.reset()
         except Exception as e:messagebox.showerror('Harita yüklenemedi',str(e))
     def pause(self):self.running=False
     def reset(self):

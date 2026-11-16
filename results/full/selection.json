@@ -1,0 +1,4 @@
+{
+  "selected_lambda": 100,
+  "rule": "validation: success, fewer collisions, mean minimum clearance, smaller lambda"
+}

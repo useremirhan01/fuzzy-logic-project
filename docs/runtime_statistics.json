@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "training_mean": 3.5288370599970222,
+    "training_sd": 0.5102017716331311,
+    "inference": 36.60004585981369
+  },
+  "proposed": {
+    "training_mean": 3.5591479199938476,
+    "training_sd": 0.4667401894867568,
+    "inference": 32.79995871707797
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "baseline": {
+    "n": 150,
+    "success": 142,
+    "collision": 7,
+    "timeout": 1,
+    "success_rate_seed_mean": 0.9466666666666667,
+    "success_rate_seed_sd": 0.029814239699997188,
+    "clearance_all_mean": 0.27248055857446973,
+    "successful_path_mean": 10.450393924745025,
+    "successful_time_mean": 20.249295774647887
+  },
+  "proposed": {
+    "n": 150,
+    "success": 140,
+    "collision": 9,
+    "timeout": 1,
+    "success_rate_seed_mean": 0.9333333333333332,
+    "success_rate_seed_sd": 0.04714045207910316,
+    "clearance_all_mean": 0.27861508299771814,
+    "successful_path_mean": 10.38040972842864,
+    "successful_time_mean": 19.525714285714287
+  },
+  "paired": {
+    "n": 135,
+    "proposed_minus_baseline_path": -0.034711768769574596
+  }
+}

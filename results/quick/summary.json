@@ -1,0 +1,28 @@
+{
+  "baseline": {
+    "n": 5,
+    "success": 4,
+    "collision": 1,
+    "timeout": 0,
+    "success_rate_seed_mean": 0.8,
+    "success_rate_seed_sd": null,
+    "clearance_all_mean": 0.22052498949451121,
+    "successful_path_mean": 11.154071559745324,
+    "successful_time_mean": 30.9
+  },
+  "proposed": {
+    "n": 5,
+    "success": 4,
+    "collision": 1,
+    "timeout": 0,
+    "success_rate_seed_mean": 0.8,
+    "success_rate_seed_sd": null,
+    "clearance_all_mean": 0.21434657400385312,
+    "successful_path_mean": 11.032056960692671,
+    "successful_time_mean": 30.65
+  },
+  "paired": {
+    "n": 4,
+    "proposed_minus_baseline_path": -0.12201459905265244
+  }
+}
